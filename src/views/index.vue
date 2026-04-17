@@ -19,8 +19,6 @@
 
 <script setup>
 import { ref } from 'vue'
-import { getUserInfo } from '@/api/user'
-
 // 定义路由元信息
 defineOptions({
     meta: {
@@ -31,12 +29,6 @@ defineOptions({
 const active = ref(0)
 const userInfo = ref(null)
 
-const fetchUserInfo = async () => {
-    const res = await getUserInfo()
-    if (res.code === 200) {
-        userInfo.value = res.data
-    }
-}
 
 </script>
 
